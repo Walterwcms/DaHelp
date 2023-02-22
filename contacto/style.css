@@ -125,3 +125,30 @@ nav {
       width: 100%;
     }
 }
+
+
+
+
+
+
+/*---------------animation for the page ---------*/
+.content{
+  animation: transitionIN 1s;
+}
+
+
+
+@keyframes transitionIN{
+
+  from{
+    opacity: 0;
+    transform: rotatex(-100deg);
+  }
+
+  to{
+    opacity: 1;
+    transform: rotateX(0);
+  }
+
+}
+
