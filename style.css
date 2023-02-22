@@ -1,0 +1,263 @@
+*{
+    margin:0;
+    padding: 0;
+    
+}
+
+
+body{
+    overflow-x:hidden ;
+}
+
+nav {
+    background-color: #212635;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  .logo {
+    font-size: 24px;
+    padding: 10px;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu a, .logo a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .burger {
+    display: none;
+  }
+  
+
+
+/*---------------------- INTRO ---------------------------------*/
+.intro{
+    margin-top: 60px;
+    width: 100vw;
+    height: 25em;
+    background-image: url('image/img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    word-wrap: break-word;
+    position: relative;
+    top:25%;
+    left: 5%;
+    margin-right: 20%;
+    color:rgb(255, 255, 255);
+    font-size: calc(24px + 2vw);
+}
+
+
+
+/*-------------- form -------------------*/
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top:35%;
+    left: 5%;
+  }
+
+
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0069d9;
+  }
+  
+/*----------------------------------------*/
+
+
+/*--------------------------------------------------------------*/
+
+
+
+
+/*----------------------- CURSOS ------------------------------ */
+
+.cursos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.curso{
+  padding: 10px;
+  box-shadow: 0px 0px 36px 0px rgba(196,196,196,1);
+  text-align: center;
+  width: 350px;
+  height: 100px;
+  margin-top: 10px;
+  color: black;
+}
+
+.curso p {
+  width: 100%;
+  height: 100%;
+}
+
+.curso a {
+  text-decoration: none;
+  color:black;
+}
+
+.curso p:hover{
+  color: white;
+}
+
+.curso:hover{
+  background-color: rgb(5, 34, 39);
+  color: white;
+}
+
+
+
+/*--------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+  
+    .burger {
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+    }
+  
+    .bar {
+      background-color: #fff;
+      height: 3px;
+      margin: 5px 0;
+      width: 25px;
+    }
+  
+    .nav-active .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .nav-active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .nav-active .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+  
+    }
+  
+    .nav-active .menu {
+      display: block;
+      position: absolute;
+      height: 100vh;
+      left: 0;
+      top:60px;
+      right: 0;
+      background-color: #2c363db2;
+      backdrop-filter: blur(4px);
+      animation: animationMenu 500ms ease-out;
+    }
+
+    @keyframes animationMenu {
+        0% {
+            top:0;
+        }
+        100%{
+            top:60px;
+        }
+    }
+  
+    .nav-active .menu li {
+      font-size: 16pt;
+      margin-top: 50px;
+      text-align: center;
+      width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*---------------animation for the page ---------*/
+.cursos{
+  animation: transitionIN 1s;
+}
+
+
+
+@keyframes transitionIN{
+
+  from{
+    opacity: 0;
+    transform: rotateX(-100deg);
+  }
+
+  to{
+    opacity: 1;
+    transform: rotateX(0);
+  }
+
+}
